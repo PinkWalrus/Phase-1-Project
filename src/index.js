@@ -1,10 +1,23 @@
 "use strict";
-const temp = document.querySelector(".temp");
 
-// create a git ignore file
+const city_temp = document.querySelector(".city_temp");
+const city_name = document.querySelector(".city_name");
+const description = document.querySelector(".description");
+const max_temp = document.querySelector(".max_temp");
+const min_temp = document.querySelector(".min_temp");
+const feels_like = document.querySelector(".feels_like");
+const humidity = document.querySelector(".humidity");
+const wind_speed = document.querySelector(".wind_speed");
 
 const renderCity = function (data, className) {
-  temp.innerHTML = data.main.temp;
+  city_temp.innerHTML = Math.round(data.main.temp) + "°F";
+  city_name.innerHTML = data.name;
+  description.innerHTML = data.weather[0].description;
+  max_temp.innerHTML = Math.round(data.main.temp_max) + "°F";
+  min_temp.innerHTML = Math.round(data.main.temp_min) + "°F";
+  feels_like.innerHTML = Math.round(data.main.feels_like) + "°F";
+  humidity.innerHTML = Math.round(data.main.humidity) + "%";
+  wind_speed.innerHTML = Math.round(data.wind.speed) + " mph";
 };
 
 const getCityData = function (cityName) {
