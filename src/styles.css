@@ -1,3 +1,115 @@
-.temp {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/img/n_thunderstorm.jpeg);
+  background-size: cover;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#content {
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* CONTENT ON LEFT SIDE */
+
+.content-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#left_side {
+  flex-grow: 10;
+  height: 100vh;
+  background-color: orange;
+  opacity: 60%;
+}
+
+.left_weather_properties {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* PANEL ON RIGHT SIDE*/
+
+#panel {
+  flex-grow: 1;
+  height: 100vh;
+}
+
+.right_weather_properties {
+  height: 100vh;
+  background-color: pink;
+  opacity: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+h2.weather_details {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  list-style: none;
+}
+
+/* SEARCH BOX */
+
+#search_bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #902143;
+  opacity: 60%;
+}
+
+#search_bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+}
+
+.submit_button {
+  height: 4em;
+  width: 4em;
+  border-radius: 60px;
+  border: 0;
+  margin: 1em;
+}
+
+.submit_button img {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.submit_button:hover {
+  background-color: orange;
 }
