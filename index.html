@@ -10,15 +10,20 @@
     <div id="content">
       <div id="left_side">
         <div class="left_weather_properties">
-          <div class="temperature">
-            <p class="city_temp">78</p>
-          </div>
-          <p class="city_name">Sarasota</p>
-          <p class="description">sunny</p>
-          <div class="city_icon"></div>
+          <p class="city_temp">78</p>
+          <span>
+            <p class="city_name">Sarasota</p>
+            <p class="description">sunny</p>
+          </span>
+          <span class="city_details">
+            <div class="city_icon">
+              <img src="http://openweathermap.org/img/wn/10n.png" />
+            </div>
+          </span>
         </div>
       </div>
       <div id="panel">
+        <div class="panel_bg"></div>
         <form id="search_bar" action="">
           <input type="text" placeholder="Search" name="search" />
           <button class="submit_button" type="submit">
@@ -28,19 +33,24 @@
         <div class="right_weather_properties">
           <h2 class="weather_details">Weather Details</h2>
           <li class="details">
-            <p class="max_temp">94</p>
+            <span>Max. Temp</span>
+            <span class="max_temp">94</span>
           </li>
           <li class="details">
-            <p class="min_temp">72</p>
+            <span>Min. Temp</span>
+            <span class="min_temp">72</span>
           </li>
           <li class="details">
-            <p class="feels_like">86</p>
+            <span>Feels Like</span>
+            <span class="feels_like">86</span>
           </li>
           <li class="details">
-            <p class="humidity">54</p>
+            <span>Humidity</span>
+            <span class="humidity">54</span>
           </li>
           <li class="details">
-            <p class="wind_speed">12</p>
+            <span>Wind Speed</span>
+            <span class="wind_speed">12</span>
           </li>
         </div>
       </div>
