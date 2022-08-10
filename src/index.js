@@ -8,6 +8,7 @@ const min_temp = document.querySelector(".min_temp");
 const feels_like = document.querySelector(".feels_like");
 const humidity = document.querySelector(".humidity");
 const wind_speed = document.querySelector(".wind_speed");
+const icon = document.querySelector(".city_icon");
 
 const renderCity = function (data, className) {
   city_temp.innerHTML = Math.round(data.main.temp) + "°F";
@@ -18,6 +19,7 @@ const renderCity = function (data, className) {
   feels_like.innerHTML = Math.round(data.main.feels_like) + "°F";
   humidity.innerHTML = Math.round(data.main.humidity) + "%";
   wind_speed.innerHTML = Math.round(data.wind.speed) + " mph";
+  icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png">`;
 };
 
 const getCityData = function (cityName) {
