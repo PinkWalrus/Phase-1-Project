@@ -15,6 +15,7 @@ body {
   justify-content: center;
   background-image: url(/img/n_thunderstorm.jpeg);
   background-size: cover;
+  color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -40,13 +41,24 @@ body {
 #left_side {
   flex-grow: 10;
   height: 100vh;
-  background-color: orange;
-  opacity: 60%;
 }
 
 .left_weather_properties {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.city_details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city_temp {
+  font-size: 8em;
+  font-weight: 500;
 }
 
 /* PANEL ON RIGHT SIDE*/
@@ -56,13 +68,21 @@ body {
   height: 100vh;
 }
 
+.panel_bg {
+  height: 100vh;
+  z-index: -1;
+  background-color: lightgray;
+  opacity: 20%;
+  width: 100%;
+  position: absolute;
+}
+
 .right_weather_properties {
   height: 100vh;
-  background-color: pink;
-  opacity: 60%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  backdrop-filter: blur(3px);
 }
 
 h2.weather_details {
@@ -84,17 +104,19 @@ h2.weather_details {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #902143;
-  opacity: 60%;
+  padding: 1em;
+  margin-top: 5px;
 }
 
 #search_bar input {
   background: transparent;
   flex: 1;
-  border: 0;
+  border: 1px grey solid;
+  border-radius: 60px;
   outline: none;
-  padding: 24px 20px;
+  padding: 0.8em 1em;
   font-size: 20px;
+  margin-left: 12px;
 }
 
 .submit_button {
