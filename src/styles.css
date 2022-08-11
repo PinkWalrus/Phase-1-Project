@@ -31,6 +31,7 @@ body {
   overflow-y: hidden;
 }
 
+/*//////////////////////////////////////////*/
 /* CONTENT ON LEFT SIDE */
 
 .content-sidebar {
@@ -45,34 +46,51 @@ body {
 
 .left_weather_properties {
   position: absolute;
-  bottom: 2em;
-  left: 2em;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  bottom: 3em;
+  left: 3em;
+  text-shadow: 1px 1px 5px black;
 }
 
-.city_details {
+.left_details {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .city_temp {
+  display: flex;
   font-size: 8em;
   font-weight: 500;
 }
 
+.city_name {
+  font-size: 2.5em;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city_icon {
+  display: flex;
+}
+
+/*//////////////////////////////////////////*/
 /* PANEL ON RIGHT SIDE*/
 
 #panel {
   flex-grow: 1;
   height: 100vh;
+  border-left: 1px white solid;
+  padding-left: 1.5em;
+  backdrop-filter: blur(5px);
 }
 
 .panel_bg {
   height: 100vh;
   z-index: -1;
   background-color: lightgray;
-  opacity: 20%;
+  opacity: 25%;
   width: 100%;
   position: absolute;
 }
@@ -82,22 +100,30 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  backdrop-filter: blur(3px);
+  text-shadow: 1px 1px 5px black;
+  padding: 2em;
 }
 
-h2.weather_details {
+.weather_details {
   display: flex;
   flex-wrap: wrap;
-  padding: 1em;
+  padding-bottom: 1em;
+  font-size: 30px;
 }
 
 .details {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding-bottom: 3em;
+  font-size: 18px;
   list-style: none;
 }
 
+li.details.first-child {
+  margin-top: 3em;
+}
+
+/*//////////////////////////////////////////*/
 /* SEARCH BOX */
 
 #search_bar {
@@ -108,10 +134,14 @@ h2.weather_details {
   margin-top: 5px;
 }
 
-#search_bar input {
+#search_bar input:focus {
+  color: white;
+}
+
+.search {
   background: transparent;
   flex: 1;
-  border: 1px grey solid;
+  border: 1px white solid;
   border-radius: 60px;
   outline: none;
   padding: 0.8em 1em;
@@ -125,13 +155,18 @@ h2.weather_details {
   border-radius: 60px;
   border: 0;
   margin: 1em;
+  background-color: white;
 }
 
-.submit_button img {
-  height: 1.5em;
-  width: 1.5em;
+button img {
+  height: 2em;
+  width: 2em;
 }
 
 .submit_button:hover {
-  background-color: orange;
+  filter: opacity(90%);
+}
+
+::placeholder {
+  color: white;
 }
