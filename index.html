@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App Name</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="src/styles.css" />
     <script src="src/API_KEY.js" type="text/javascript" defer></script>
     <script src="src/index.js" type="text/javascript" defer></script>
@@ -10,47 +10,50 @@
     <div id="content">
       <div id="left_side">
         <div class="left_weather_properties">
-          <p class="city_temp">78</p>
-          <span>
-            <p class="city_name">Sarasota</p>
-            <p class="description">sunny</p>
-          </span>
-          <span class="city_details">
-            <div class="city_icon">
-              <img src="http://openweathermap.org/img/wn/10n.png" />
-            </div>
-          </span>
+          <p class="city_temp"></p>
+          <div class="left_details">
+            <p class="city_name"></p>
+            <span class="city_icon"></span>
+            <img src="" />
+          </div>
+          <span class="description"></span>
         </div>
       </div>
       <div id="panel">
         <div class="panel_bg"></div>
-        <form id="search_bar" action="">
-          <input type="text" placeholder="Search" name="search" />
-          <button class="submit_button" type="submit">
+        <div id="search_bar" action="">
+          <input
+            type="text"
+            class="search"
+            placeholder="Search"
+            name="search"
+          />
+          <button class="submit_button">
             <img src="https://cdn-icons-png.flaticon.com/512/151/151773.png" />
           </button>
-        </form>
+        </div>
         <div class="right_weather_properties">
           <h2 class="weather_details">Weather Details</h2>
-          <li class="details">
+          <hr />
+          <li class="details first-child">
             <span>Max. Temp</span>
-            <span class="max_temp">94</span>
+            <span class="max_temp"></span>
           </li>
           <li class="details">
             <span>Min. Temp</span>
-            <span class="min_temp">72</span>
+            <span class="min_temp"></span>
           </li>
           <li class="details">
             <span>Feels Like</span>
-            <span class="feels_like">86</span>
+            <span class="feels_like"></span>
           </li>
           <li class="details">
             <span>Humidity</span>
-            <span class="humidity">54</span>
+            <span class="humidity"></span>
           </li>
           <li class="details">
             <span>Wind Speed</span>
-            <span class="wind_speed">12</span>
+            <span class="wind_speed"></span>
           </li>
         </div>
       </div>
