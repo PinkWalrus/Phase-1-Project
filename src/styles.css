@@ -46,8 +46,8 @@ body {
 
 .left_weather_properties {
   position: absolute;
-  bottom: 3em;
-  left: 3em;
+  bottom: 5em;
+  left: 5em;
   text-shadow: 1px 1px 5px black;
 }
 
@@ -58,17 +58,18 @@ body {
 
 .city_temp {
   display: flex;
-  font-size: 8em;
-  font-weight: 500;
+  font-size: 9em;
+  font-weight: 700;
+  margin-bottom: -12px;
 }
 
 .city_name {
-  font-size: 2.5em;
+  font-size: 2.8em;
 }
 
 .description {
+  font-size: 1.5em;
   display: flex;
-  justify-content: space-between;
 }
 
 .city_icon {
@@ -101,7 +102,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   text-shadow: 1px 1px 5px black;
-  padding: 2em;
+  padding: 2em 3em;
 }
 
 .weather_details {
@@ -115,7 +116,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 3em;
-  font-size: 18px;
+  font-size: 1.3em;
   list-style: none;
 }
 
@@ -130,16 +131,16 @@ li.details.first-child {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 1em;
+  padding: 2em;
   margin-top: 5px;
 }
 
-#search_bar input:focus {
+/* #search_bar input:focus {
   color: white;
-}
+} */
 
 .search {
-  background: transparent;
+  /* background: transparent; */
   flex: 1;
   border: 1px white solid;
   border-radius: 60px;
@@ -147,6 +148,7 @@ li.details.first-child {
   padding: 0.8em 1em;
   font-size: 20px;
   margin-left: 12px;
+  color: black;
 }
 
 .submit_button {
@@ -167,6 +169,71 @@ button img {
   filter: opacity(90%);
 }
 
-::placeholder {
-  color: white;
+/*//////////////////////////////////////////*/
+/* MEDIA QUERIES */
+
+/* MOBILE */
+
+@media screen and (max-width: 464px) {
+  #content {
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+  }
+
+  #left_side {
+    height: 40vh;
+    position: relative;
+  }
+
+  .left_weather_properties {
+    bottom: initial;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .right_weather_properties {
+    bottom: initial;
+    left: initial;
+    padding: 2em;
+    height: initial;
+  }
+
+  #panel {
+    padding-left: 0;
+    border-left: 0;
+    height: initial;
+  }
+
+  #container {
+    display: flex;
+  }
+
+  #search_bar {
+    padding: 0;
+  }
+
+  .search {
+    margin-left: 1em;
+  }
+
+  .details {
+    padding-bottom: 1em;
+  }
+
+  li.details.first-child {
+    margin-top: 1em;
+  }
+
+  .weather_details {
+    justify-content: center;
+  }
+}
+
+/* TABLET */
+
+@media screen and (max-width: 1024px) {
 }
