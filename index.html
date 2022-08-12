@@ -4,33 +4,44 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="src/styles.css" />
     <script src="src/API_KEY.js" type="text/javascript" defer></script>
+    <script src="src/const.js" type="text/javascript" defer></script>
+    <script src="src/weather.js" type="text/javascript" defer></script>
     <script src="src/index.js" type="text/javascript" defer></script>
   </head>
   <body>
     <div id="content">
       <div id="left_side">
+        <!-- <button id="toggle_button">metric</button> -->
+        <div class="toggle">
+          <div class="toggle_button">
+            <p class="cf">F</p>
+          </div>
+        </div>
         <div class="left_weather_properties">
           <p class="city_temp"></p>
           <div class="left_details">
             <p class="city_name"></p>
             <span class="city_icon"></span>
-            <img src="" />
           </div>
           <span class="description"></span>
         </div>
       </div>
       <div id="panel">
         <div class="panel_bg"></div>
-        <div id="search_bar" action="">
-          <input
-            type="text"
-            class="search"
-            placeholder="Search"
-            name="search"
-          />
-          <button class="submit_button">
-            <img src="https://cdn-icons-png.flaticon.com/512/151/151773.png" />
-          </button>
+        <div id="container">
+          <div id="search_bar" action="">
+            <input
+              type="text"
+              class="search"
+              placeholder="Search"
+              name="search"
+            />
+            <button class="submit_button">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/151/151773.png"
+              />
+            </button>
+          </div>
         </div>
         <div class="right_weather_properties">
           <h2 class="weather_details">Weather Details</h2>
