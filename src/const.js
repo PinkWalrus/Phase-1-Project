@@ -10,4 +10,4 @@ const wind_speed = document.querySelector(".wind_speed");
 const icon = document.querySelector(".city_icon");
 const button = document.querySelector(".submit_button");
 const search = document.querySelector(".search");
-const toggle = document.querySelector("#toggle_button");
+const toggle = document.querySelector(".toggle");

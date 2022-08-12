@@ -4,9 +4,17 @@ button.addEventListener("click", function () {
   getCityData(search.value);
 });
 
-// toggle.addEventListener("click", function () {
-//   getCityData(city_name.textContent, "metric");
-// });
+const cf = document.querySelector(".cf");
+
+toggle.addEventListener("click", function () {
+  if (toggle.classList.toggle("active")) {
+    getCityData(city_name.textContent, "metric");
+    cf.textContent = "C";
+  } else {
+    getCityData(city_name.textContent, "imperial");
+    cf.textContent = "F";
+  }
+});
 
 function getCityData(city, unit = "imperial") {
   fetch(
