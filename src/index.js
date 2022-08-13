@@ -1,27 +1,27 @@
 "use strict";
 
-button.addEventListener("click", function () {
-  getCityData(search.value);
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  getCityData(search.value, toggle_state);
 });
-
-const cf = document.querySelector(".cf");
 
 toggle.addEventListener("click", function () {
   if (toggle.classList.toggle("active")) {
-    getCityData(city_name.textContent, "metric");
-    cf.textContent = "C";
+    toggle_state = "metric";
+    celsiusFahrenheit.textContent = "C";
   } else {
-    getCityData(city_name.textContent, "imperial");
-    cf.textContent = "F";
+    toggle_state = "imperial";
+    celsiusFahrenheit.textContent = "F";
   }
+  getCityData(city_name.textContent, toggle_state);
 });
 
-function getCityData(city, unit = "imperial") {
+function getCityData(city) {
   fetch(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
       "&units=" +
-      unit +
+      toggle_state +
       "&appid=" +
       API_KEY
   )

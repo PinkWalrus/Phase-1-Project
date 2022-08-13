@@ -6,7 +6,9 @@ function weatherDetails(data) {
   min_temp.innerHTML = Math.round(data.main.temp_min) + "°";
   feels_like.innerHTML = Math.round(data.main.feels_like) + "°";
   humidity.innerHTML = Math.round(data.main.humidity) + "%";
-  wind_speed.innerHTML = Math.round(data.wind.speed) + " mph";
+  wind_speed.innerHTML = `${Math.round(data.wind.speed)} ${
+    toggle_state === "imperial" ? "mph" : "kph"
+  }`;
   icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png">`;
 }
 
