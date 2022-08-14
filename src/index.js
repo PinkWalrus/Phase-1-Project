@@ -3,6 +3,7 @@
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   getCityData(search.value, toggle_state);
+  form.reset();
 });
 
 toggle.addEventListener("click", function () {
